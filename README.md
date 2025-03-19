@@ -45,7 +45,9 @@ Security risks (and the need to mitigate them) can occur at any point in the dev
 	- Laws 
 	- Industry specific standards
 **1.2 Define Security Requirements**
-Use known threats (Such as [OWASP Top 10](https://owasp.org/www-project-top-ten/) or [SANS Top 25](https://www.sans.org/top25-software-errors/) or [Mitre's Top 25](https://cwe.mitre.org/top25/) ) to establish a minimum-security baseline. This baseline can be in the form of security compliance controls, which include processes as well as automated checks that must be adhered to at different steps in the development lifecycle. Compliance controls may integrate automated scanning tools into the development lifecycle. Here are some modern SAST tools:
+Use known threats (Such as [OWASP Top 10](https://owasp.org/www-project-top-ten/) or [SANS Top 25](https://www.sans.org/top25-software-errors/) or [Mitre's Top 25](https://cwe.mitre.org/top25/) ) to establish a minimum-security baseline. This baseline can be in the form of security compliance controls, which include processes as well as automated checks that must be adhered to at different steps in the development lifecycle. Compliance controls may integrate automated scanning tools into the development lifecycle.
+
+Here are some modern SAST tools:
 - [GitHub's Advanced Security (GHAS)](https://github.com/advanced-security), 
 - [GitHub's Dependabot](https://docs.github.com/en/code-security/dependabot/dependabot-alerts/about-dependabot-alerts)
 - `npm audit`, [ESLint](https://eslint.org/)/[TSLint](https://typescript-eslint.io/) for NodeJS
