@@ -27,7 +27,7 @@ The project may already have packages related to ESLint, so ensure they are the 
 
 # 2\. Configuration
 
-The project may already have an ESLint configuration file. If this is the case, delete that configuration file because we will create a new one with the commands `pnpm dlx @eslint/create-config` **|** `npm init @eslint/config@latest`. This command will prompt you to answer some questions about your project and once you answer the questions, you should have a eslint.config.mjs file that looks like this:
+The project may already have an ESLint configuration file. If this is the case, delete that configuration file because we will create a new one with the commands `pnpm dlx @eslint/create-config` **|** `npm init @eslint/config@latest`. Also delete all comment eslint configurations, they look like this ```eslint-disable ...``` This command will prompt you to answer some questions about your project and once you answer the questions, you should have a eslint.config.mjs file that looks like this:
 
 ```
 import { defineConfig } from "eslint/config";
