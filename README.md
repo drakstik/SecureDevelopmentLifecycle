@@ -1,8 +1,12 @@
-Figma Presentation of this README:  https://www.figma.com/design/xPoUpar3TCKNEqlQ3FK2cE/Untitled?node-id=0-1&t=jpdsxuLxv5iafDrL-1
+This repo will contain our tool protocols, including a protocol for ESLint, as well as our general principals and practices. All protocols will have sections that is meant to help developers run tools, resolve easy issues and raise exceptions; these sections will be labeled For Developers.
+
 
 
 
 # Microsoft's Security Development Lifecycle (SDL)
+
+Visual presentation of our SDL:  https://www.figma.com/design/xPoUpar3TCKNEqlQ3FK2cE/Untitled?node-id=0-1&t=jpdsxuLxv5iafDrL-1
+
 20 years ago, Microsoft introduced the [Security Development Lifecycle (SDL)](https://www.microsoft.com/en-us/securityengineering/sdl/practices) practices as a set of 10 principals that can be easily digest by all developers working at Microsoft. 
 
 To understand the SDL, we must understand the steps involved in the development lifecycle and how each step can result in a compromised system.
