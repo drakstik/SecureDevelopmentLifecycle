@@ -1,7 +1,6 @@
-This repo will contain our tool protocols, including a protocol for ESLint, as well as our general principals and practices. All protocols will have sections that is meant to help developers run tools, resolve easy issues and raise exceptions; these sections will be labeled For Developers.
+This repo will contain our security tool protocols, including a protocol for ESLint, as well as our general security principals and practices. As a developer, this will be your one-stop shop for understanding our secure coding standards. This repo does not hold any descriptions of our security implementation, but it does outline our strategies, reference frameworks and testing/auditing tools, as well as how to configure and use the tools.
 
-
-
+NOTE: The most interesting part, for Developers in a hurry, are the Tool Protocols. Tool Protocols have sections that are meant to help developers run tools, resolve easy issues and raise exceptions; these sections will be labeled _(For Developers)_.
 
 # Microsoft's Security Development Lifecycle (SDL)
 
