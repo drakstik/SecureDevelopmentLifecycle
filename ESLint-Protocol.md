@@ -98,8 +98,7 @@ For example, these are some plugins selected with this criteria:
 
 **1\. eslint-plugin-security -- Maintained by ESLint Community  
 2\. eslint-plugin-no-unsanitized -- Maintained by Mozilla  
-3\. @microsoft/eslint-plugin-sdl -- Maintained by Microsoft  
-4\. eslint-plugin-no-secrets**
+3\. @microsoft/eslint-plugin-sdl -- Maintained by Microsoft  **
 
 Other plugins may not necessarily be security related, but they may still be useful to incorporate in the SDL. For example **@microsoft/eslint-formatter-sarif** so it can be imported into tools like GitHub Advanced Security.
 
