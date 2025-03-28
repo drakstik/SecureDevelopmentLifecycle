@@ -164,33 +164,6 @@ export default defineConfig([
 ])
 ```
 
-### 2.1.3 Installing eslint-plugin-no-secrets
-
-[eslint-plugin-no-secrets](https://www.npmjs.com/package/eslint-plugin-no-secrets) searches for potential secrets/keys in code and JSON files, using cryptographic entropy or patterns.
-
-To install the plugin's package, use the command `pnpm add eslint-plugin-no-secrets -D` or `npm install --save-dev eslint-plugin-no-secrets`.
-
-Then import the package within the eslint.config.mjs file, like this:
-
-```
-import noSecrets from "eslint-plugin-no-secrets";
-
-```
-
-and add these lines in the defineConfig() function:
-
-```
-export default defineConfig([
-    {
-      files: ["**/*.js"],
-      plugins: {noSecrets},
-      rules: {
-        "noSecrets/no-secrets": "error",
-      },
-  },
-])
-```
-
 # 3\. Run ESLint (For Developers)
 
 While in the project folder you can run: `pnpm eslint .` or `pnpm run lint` **|** `npm eslint .` or `npm run lint`. The script for the keyword 'lint' can be found in the packages.json under "script" and it should look like this `lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"`.
