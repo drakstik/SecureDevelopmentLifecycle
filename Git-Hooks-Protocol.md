@@ -1,18 +1,20 @@
 Git hooks can be used to alert developers of security issues that must be resolved before git commit, push and pull. These git hooks will run some static analysis security tools (ESLint, npm/pnpm audit, ggshield secret scan, etc...) and verify no critical security flaws are found. If critical security vulnerabilities or coding errors are found then the hook will alert the developer, create a tool report file and maybe block the developer from pushing to remote until the issues are resolved or exceptions made.
 
 # Which security tools do we run?
-
-- Remove old reports:
-    -   ```rm .cache_ggshield .eslint-report .npm-audit-report .pnpm-audit-report```
-- No ESLint errors + configure eslint so only security issues are errors,
-    -   ```pnpm eslint . --fix > .eslint-report```
-- trying to disable ESLint,
-    -   ```grep -r --exclude-dir=node_modules --include='*.js' --include='*.ts' --include='*.jsx' --include='*.tsx' "eslint-disable" . ```
-- critical/high dependency vulnerabilities
-    -   ```npm audit --fix > .npm-audit-report```
+**- Check if secure-setup was up-to-date when it was ran **
+    - During secure-setup, we add the secure-setup.sh file hash to the prepare-commit-msg file.
+    - In the prepare-commit-msg file, we check if the secure-setup hash is up-to-date, 
+        - if not we clone the latest version of secure-setup.sh and run the setup process again to ensure we are always on the same secure-setup, even when it's updated.
+**- ggshield (blocking):
+**    -   ```ggshield secret scan pre-commit "$@"```
+**- No usage of disable-eslint (blocking),
+**    -   ```grep -r --exclude-dir=node_modules --exclude-dir=.githooks --include='*' "eslint-disable" . ```
+**- No ESLint errors + configure eslint.config.mjs so only security issues are errors (non-blocking),
+**    -   ```pnpm eslint . --fix > .eslint-report```
+**- Critical | High dependency vulnerabilities (non-blocking),
+**    -   ```npm audit --fix > .npm-audit-report```
     -   ```pnpm audit --fix > .pnpm-audit-report```
-- No secrets:
-    -   ```ggshield secret scan pre-commit "$@"```
+
       
 
 # How to integrate git hooks into your project
